@@ -1,18 +1,24 @@
-DUY HEALTH LANDING - CLEAN PACKAGE
+AUTO HOMEPAGE FOR OFFERS
 
-Upload the CONTENTS of this folder into the GitHub repository root.
+Upload these files into the ROOT of your GitHub repo:
+- index.html
+- offers.js
 
-Correct structure:
-index.html
-vercel.json
-README.txt
-images/cholibrium-product.jpg
-cholibrium-heart-wellness/index.html
-go/cholibrium/index.html
+How to add a new offer to homepage:
+1. Open offers.js
+2. Copy one offer block
+3. Change title, category, description, url, image
+4. Commit to main and Push origin
 
-Links after Vercel deploy:
-https://duyduckfashion.click/
-https://duyduckfashion.click/cholibrium-heart-wellness/
-https://duyduckfashion.click/go/cholibrium/
+Example:
+{
+  title: "New Offer Name",
+  category: "Wellness",
+  description: "Short safe description here.",
+  url: "/new-offer-folder/",
+  image: "/images/new-offer-product.jpg"
+}
 
-Do not upload the parent folder itself.
+IMPORTANT:
+The landing folder must exist, e.g. /new-offer-folder/index.html
+The image path must exist, e.g. /images/new-offer-product.jpg
