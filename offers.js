@@ -1,23 +1,42 @@
-window.OFFERS = [
+const offers = [
+  {
+    title: "HydroLean XT Weight Wellness",
+    category: "Weight Wellness",
+    description: "A clean guide page focused on hydration, healthy routine support, and weight wellness information.",
+    url: "/weight-wellness-guide",
+    image: "images/hydrolean-xt.jpg"
+  },
   {
     title: "Cholibrium Heart Wellness",
     category: "Heart Wellness",
-    description: "Simple daily habits and support information for adults interested in heart wellness.",
-    url: "/cholibrium-heart-wellness/",
-    image: "/images/cholibrium-product.jpg"
+    description: "A more natural, premium-looking guide for adults interested in heart wellness support and daily habits.",
+    url: "/cholibrium-heart-wellness",
+    image: "images/cholibrium.jpg"
   },
   {
     title: "ProDentim Oral Wellness",
     category: "Oral Wellness",
-    description: "Fresh oral wellness habits and product information for adults interested in daily oral care routines.",
-    url: "/prodentim-oral-wellness/",
-    image: "/images/prodentim-product.jpg"
-  },
-  {
-    title: "HydroLean Weight Wellness",
-    category: "Weight Wellness",
-    description: "Healthy weight wellness habits around hydration, balanced meals, movement, and daily routine support.",
-    url: "/weight-wellness-guide/",
-    image: "/images/hydrolean-product.jpg"
+    description: "An oral wellness landing guide with a fresh, clean product image and a softer lifestyle presentation.",
+    url: "/prodentim-oral-wellness",
+    image: "images/prodentim.jpg"
   }
 ];
+
+const grid = document.getElementById('offers-grid');
+
+if (grid) {
+  grid.innerHTML = offers.map(offer => `
+    <article class="offer-card">
+      <img src="${offer.image}" alt="${offer.title}">
+      <div class="offer-card-body">
+        <span class="offer-tag">${offer.category}</span>
+        <h3>${offer.title}</h3>
+        <p>${offer.description}</p>
+        <div class="offer-footer">
+          <a class="offer-link" href="${offer.url}">Open guide →</a>
+          <a class="btn btn-outline" href="${offer.url}">View</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
