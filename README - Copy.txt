@@ -1,0 +1,1 @@
+SEO affiliate site package. Upload all files/folders to the root of your GitHub repo, then commit and push. Submit sitemap.xml in Google Search Console.
